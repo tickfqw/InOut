@@ -3,6 +3,7 @@ package com.example.tick.inout;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -71,13 +72,15 @@ public class AddOutaccount extends Activity{
 
             @Override
             public void onClick(View arg0) {
-                txtMoney.setText("");// 设置金额文本框为空
-                txtMoney.setHint("0.00");// 为金额文本框设置提示
-                txtTime.setText("");// 设置时间文本框为空
-                txtTime.setHint("2011-01-01");// 为时间文本框设置提示
-                txtAddress.setText("");// 设置地点文本框为空
-                txtMark.setText("");// 设置备注文本框为空
-                spType.setSelection(0);// 设置类别下拉列表默认选择第一项
+                Intent intent=new Intent(AddOutaccount.this,MainActivity.class);
+                startActivity(intent);
+                //txtMoney.setText("");// 设置金额文本框为空
+               // txtMoney.setHint("0.00");// 为金额文本框设置提示
+              //  txtTime.setText("");// 设置时间文本框为空
+               // txtTime.setHint("2011-01-01");// 为时间文本框设置提示
+               // txtAddress.setText("");// 设置地点文本框为空
+               // txtMark.setText("");// 设置备注文本框为空
+               // spType.setSelection(0);// 设置类别下拉列表默认选择第一项
             }
         });
 
